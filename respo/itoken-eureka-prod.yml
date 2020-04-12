@@ -15,11 +15,12 @@ eureka:
   instance:
     hostname: 192.168.184.135
   client:
-    registerWithEureka: true
-    fetchRegistry: true
-    serviceUrl:
+    fetch-registry: true
+    register-with-eureka: true
+    service-url:
       defaultZone: http://192.168.184.135:8761/eureka,http://192.168.184.135:8861/eureka,http://192.168.184.135:8961/eureka
-
+  server:
+    enable-self-preservation: false
 management:
   endpoint:
     health:
